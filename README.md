@@ -42,6 +42,16 @@ sequenceDiagram
 
 ## 2. Key Features
 
+### 🖼️ Screenshots Preview
+
+| Login Page | Dashboard Page |
+| :---: | :---: |
+| ![CRM Login](./docs/screenshots/login.png) | ![CRM Dashboard](./docs/screenshots/dashboard.png) |
+
+| Customers List & Details | Deals Kanban Board |
+| :---: | :---: |
+| ![Customers List](./docs/screenshots/customers.png) | ![Deals Kanban](./docs/screenshots/deals.png) |
+
 ### 🎨 Creative Theme Selector
 The application has a premium built-in **Theme Engine** supporting 4 distinct themes that persist in `localStorage` across page reloads:
 *   **Dark (Default):** Deep slate-blue theme with electric blue accents.
