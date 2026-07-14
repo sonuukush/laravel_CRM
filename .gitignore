@@ -1,0 +1,36 @@
+# Root GitIgnore for miniCRM Project
+
+# Packages & Dependencies
+frontend/node_modules/
+backend/vendor/
+
+# Environment configurations
+backend/.env
+backend/.env.backup
+backend/.env.production
+
+# Build folder
+frontend/dist/
+frontend/build/
+
+# Local logs & storage
+backend/storage/*.key
+backend/storage/logs/*.log
+backend/storage/framework/cache/data/*
+backend/storage/framework/sessions/*
+backend/storage/framework/testing/*
+backend/storage/framework/views/*.php
+backend/storage/app/public/profile_photos/*
+backend/storage/app/public/documents/*
+
+# IDE and OS settings
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.eslintcache
+.project
+.settings/

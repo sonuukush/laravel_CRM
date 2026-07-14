@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS Theme Variable Specifications */
+:root {
+  /* Theme 1: Dark Theme (Default - Deep Slate Blue) */
+  --bg-main: #020617;
+  --bg-card: #0f172a;
+  --bg-input: #070a13;
+  --border-color: #1e293b;
+  --border-hover: #334155;
+  --text-main: #e2e8f0;
+  --text-muted: #94a3b8;
+  --text-title: #ffffff;
+  
+  --accent-primary: #2563eb;
+  --accent-hover: #3b82f6;
+  --accent-light: #60a5fa;
+
+  color-scheme: dark;
+}
+
+[data-theme="light"] {
+  /* Theme 2: Light Theme (Crisp Clean Minimal Slate) */
+  --bg-main: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-input: #f1f5f9;
+  --border-color: #cbd5e1;
+  --border-hover: #94a3b8;
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --text-title: #0f172a;
+  
+  --accent-primary: #1d4ed8;
+  --accent-hover: #2563eb;
+  --accent-light: #3b82f6;
+
+  color-scheme: light;
+}
+
+[data-theme="cyan"] {
+  /* Theme 3: Cyan Theme (Cyberpunk Teal/Cyan) */
+  --bg-main: #040c0e;
+  --bg-card: #0c1e21;
+  --bg-input: #061215;
+  --border-color: #16383b;
+  --border-hover: #265e63;
+  --text-main: #dcf2f4;
+  --text-muted: #83b2b7;
+  --text-title: #ffffff;
+  
+  --accent-primary: #0ea5e9;
+  --accent-hover: #38bdf8;
+  --accent-light: #7dd3fc;
+
+  color-scheme: dark;
+}
+
+[data-theme="emerald"] {
+  /* Theme 4: Emerald Theme (Forest Organic Green) */
+  --bg-main: #030806;
+  --bg-card: #0a1f16;
+  --bg-input: #05120d;
+  --border-color: #1b4332;
+  --border-hover: #2d6a4f;
+  --text-main: #d8f3dc;
+  --text-muted: #95d5b2;
+  --text-title: #ffffff;
+  
+  --accent-primary: #059669;
+  --accent-hover: #10b981;
+  --accent-light: #34d399;
+
+  color-scheme: dark;
+}
+
+/* Custom Overrides for Smooth Theme Transition */
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+/* Ensure text-white behaves dynamically across themes */
+.text-white {
+  color: var(--text-title);
+}
+
+/* Force high-contrast white text for colored buttons, active states, and custom badges */
+.bg-blue-600,
+.bg-blue-500,
+.bg-emerald-600,
+.bg-rose-600,
+.bg-amber-600,
+button.bg-blue-600 *,
+button.bg-blue-500 *,
+button.bg-emerald-600 *,
+button.bg-rose-600 *,
+a.bg-blue-600 *,
+a.bg-blue-600,
+span.bg-emerald-500 *,
+span.bg-blue-500 *,
+span.bg-emerald-500,
+span.bg-blue-500,
+span.bg-rose-500,
+span.bg-amber-500 {
+  color: #ffffff !important;
+}
+
+/* Specific button text color helper */
+button.bg-blue-600, 
+button.bg-blue-500, 
+button.bg-emerald-600, 
+button.bg-rose-600, 
+button.bg-amber-600 {
+  color: #ffffff !important;
+}
+
+/* Subtle Shadows for Light Mode Card elevation */
+[data-theme="light"] .bg-slate-900 {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+}
+
+[data-theme="light"] .bg-slate-950\/40 {
+  background-color: #f8fafc;
+}
+
+[data-theme="light"] .bg-slate-950 {
+  background-color: #ffffff;
+}
+
+/* Recharts styling adjustments */
+.recharts-cartesian-grid-horizontal line, 
+.recharts-cartesian-grid-vertical line {
+  stroke: var(--border-color) !important;
+}
+
+/* Smooth background transitions for interactive elements */
+div, button, input, select, textarea, a {
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
